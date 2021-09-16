@@ -20,7 +20,7 @@ export default function EditarSensores(){
         await api.get(`api/sensorVaga`).then(response => {
             for(var i = 0; i < response.data.length; i++){
                 //console.log(response.data[i].dispositivo.estacionamento.idEstacionamento);
-                if(response.data[i].dispositivo.estacionamento.idEstacionamento == idEstacionamento){
+                if(response.data[i].dispositivo?.estacionamento?.idEstacionamento == idEstacionamento){
                     sensoresEstacionamentoAtual.push(response.data[i])
                 }
             }
@@ -63,9 +63,9 @@ export default function EditarSensores(){
     }
     
     return (
-        <div>
-            <h1>GeVU</h1>
-            <Link to="/EscolherEstacionamentosSensores"> 
+        <div className="principal" style={{fontFamily: 'Helvetica, Arial, sans-serif'}}>
+            <h1 className="title" style={{ textAlign: 'center', backgroundColor: '#9cb582', textTransform: 'uppercase', paddingTop: 100, paddingBottom: 100 }}>GeVU</h1>
+            <Link to="/EscolherEstacionamentosSensores" style={{textDecoration: 'none', backgroundColor: '#444', color: 'white', position: 'absolute', top: 20, padding: 20}}> 
                 Voltar
             </Link>
             <h2>Editar sensor</h2>

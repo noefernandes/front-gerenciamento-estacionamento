@@ -52,9 +52,9 @@ export default function EditarEstacionamentos(){
     }
     
     return (
-        <div>
-            <h1>GeVU</h1>
-            <Link to="/EscolherEstacionamentos"> 
+        <div className="principal" style={{fontFamily: 'Helvetica, Arial, sans-serif'}}>
+            <h1 className="title" style={{ textAlign: 'center', backgroundColor: '#9cb582', textTransform: 'uppercase', paddingTop: 100, paddingBottom: 100 }}>GeVU</h1>
+            <Link to="/EscolherEstacionamentos" style={{textDecoration: 'none', backgroundColor: '#444', color: 'white', position: 'absolute', top: 20, padding: 20}}> 
                 Voltar
             </Link>
             <h2>Editar estacionamento</h2>
